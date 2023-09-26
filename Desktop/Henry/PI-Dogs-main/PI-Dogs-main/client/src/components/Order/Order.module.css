@@ -1,0 +1,17 @@
+.divSelect {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: x-large;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.selectValue {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: medium;
+    width: 150px;
+    height: 50px;
+}

@@ -1,0 +1,43 @@
+.landingBody{
+    font-family:Nunito;
+    font-size:xx-large;
+    text-align: justify;
+    margin-right: 1cm;
+    margin-left: 1cm;
+    padding-right: 1cm;
+    padding-left: 1cm;
+    padding-bottom: 2cm;
+    margin-bottom:1%;
+    height: 100vh;
+    /*border: blue 5px solid;*/
+}
+
+.landingButton{
+    background-image: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family:Nunito;
+    border-style: none;
+    margin: 32px auto 0 0;
+    padding: 10px 52px 10px 51px;
+    background-color: rgb(242, 196, 153);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.landingH1{
+    font-size: 100%;
+    color: black;    
+}
+
+.landingText{
+    margin-top: 20%;
+    font-weight: 800;
+}
+.landingP{
+    font-size: 60%;
+    text-align: justify;
+    color: black;
+}

@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https:////fonts.googleapis.com/css?family=Chewy');
+@import url('https:////fonts.googleapis.com/css?family=Nunito');
+ 
+
+/**{
+  background-image: url("./assets/pawbg.avif");
+  }*/
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto','Chewy', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Nunito',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background-color:rgb(255, 237, 218);*/
+  background-image: url("./assets/pawbg.avif");
+  height: 150vh;
+
 }
 
 code {

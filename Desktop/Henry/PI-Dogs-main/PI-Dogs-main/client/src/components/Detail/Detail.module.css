@@ -1,0 +1,87 @@
+.divDetail {
+   
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo transparente */
+    /*border: 5px solid rgba(205, 133, 63, 0.2);*/
+
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50em;
+    height: 35em;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px peru,
+        -15px -15px 15px peru;
+    /*box-shadow: 15px 15px 15px #bebebe,
+        -15px -15px 15px #ffffff;*/
+
+}
+
+.divTotal {
+    display: flex;
+    height: 100vh;
+    /*border: blue 5px solid;*/
+}
+
+.buttonBack {
+    width: 7em;
+    height: 3em;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 100%;
+    border-radius: 50%;
+    color: black;
+    margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    cursor: pointer;
+    border: 0px rgb(139, 78, 78) solid;
+}
+.divButtons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:5px;
+    margin-top: 5%;
+}
+
+.divText {
+    flex: 0.5;
+    /* Ocupa todo el espacio disponible en el eje horizontal */
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+    border-radius: 6%;
+    margin: auto;
+    padding: 15px;
+    margin-top: 1em;
+    /*border: 5px rgb(53, 228, 155) solid;*/
+}
+
+.divImg {
+    flex: 1;
+    /* Ocupa todo el espacio disponible en el eje horizontal */
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+    /* RGBA con un valor alfa de 0.7 (70%) */
+    border-radius: 10px;
+    /* Puedes ajustar el radio de borde según tu diseño */
+    padding: 15px;
+    margin: auto;
+    /* Agrega una sombra suave */
+    /*border: 5px rgb(48, 219, 91) solid;*/
+}
+
+.dogImage {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    /*border: 5px rgb(104, 39, 209) solid;*/
+}
+
+.dogText {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 22px;
+    color: peru;
+    text-align: center;
+    /*border: 5px rgb(67, 126, 214) solid;*/
+}

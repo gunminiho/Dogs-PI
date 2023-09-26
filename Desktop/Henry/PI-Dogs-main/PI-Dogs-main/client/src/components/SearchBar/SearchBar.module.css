@@ -1,0 +1,174 @@
+.divSearchBar {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 25px;
+    gap: 20px;
+
+}
+
+.divInput {
+    width: 200px;
+    height: 35px;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: x-large;
+    border-style: dotted;
+    border-radius: 10px;
+
+}
+
+.imgDoge {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    transition: 0.1s ease-in-out;
+}
+
+.imgDoge:hover{
+  transform: scale(1.2);
+
+}
+
+/* ESTILOS PARA BUTON SEARCH*/
+
+.inputSearchcontainer {
+    position: relative;
+  }
+  .inputSearch {
+    padding: 10px;
+    width: 15em;
+    height: 40px;
+    border: 2px solid #0B2447;
+    border-top: none;
+    border-bottom: none;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    box-shadow: 7px 7px 0px 0px #0B2447;
+    transition: all 0.5s;
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: 600;
+  }
+  
+  .inputSearch:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  .inputSearch::placeholder{
+    color: grey !important;
+    font-weight: 600;
+    opacity: 0.75 !important;
+  }
+  
+  .label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #0B2447;
+    transition: all 0.5s;
+    transform: scale(0);
+    z-index: -1;
+    font-size: 75%;
+  }
+  
+  .inputSearchcontainer .topline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+  }
+  
+  .inputSearchcontainer input[type="text"]:focus ~ .topline {
+    width: 30%;
+    transition: all 0.5s;
+    
+  }
+  
+  .inputSearchcontainer .underline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  
+  .inputSearchcontainer input[type="text"]:focus ~ .underline {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .inputSearchcontainer input[type="text"]:focus ~ .label {
+    top: -10px;
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+
+/* ESTILOS PARA BOTON RESET*/
+
+.buttonReset {
+    background-color: rgb(196, 196, 196);
+    font-weight: bold;
+    font-size: 0.65em;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 6em;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 500ms;
+    z-index: 99;
+    font-family: Nunito;
+    font-weight: 600;
+}
+
+.buttonReset::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    bottom: -30px;
+    left: 45px;
+    background-color: rgb(243, 181, 118);
+    z-index: -99;
+    transition: all 500ms;
+}
+
+.buttonReset:hover::after {
+    width: 120px;
+    height: 60px;
+    border-radius: 10px;
+    transition: all 500ms;
+    bottom: -1px;
+    left: -1px;
+}
+
+.buttonReset:hover {
+    border-radius: 20px;
+    box-shadow: 0 0 100px 20px grey;
+}
+
+.buttonReset:active {
+    transform: translateY(10px);
+}
+
+.buttonReset:focus {
+    border: 5px solid #a0fad8;
+}

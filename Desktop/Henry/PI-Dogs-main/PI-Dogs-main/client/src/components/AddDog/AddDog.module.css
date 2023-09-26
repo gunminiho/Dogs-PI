@@ -1,0 +1,211 @@
+.divForm {
+  display: flex;
+  flex-wrap: row;
+  width: 1100px;
+  border: 0px solid blue;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  box-shadow: 0px 0px 20px 15px  peru;
+        /*-0px -0px 10px peru;*/
+  overflow: hidden !important;  
+}
+
+.divAdd{
+  /*border: 5px solid rgb(0, 0, 0);*/
+  margin-top: 145px;
+  height: 150vh;
+}
+
+.divLeft {
+  display: flex;
+  flex-direction: column;
+  border: 0px dotted peru;
+  width: 45%;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.divRight {
+  display: flex;
+  flex-direction: column;
+  border: 0px dotted peru;
+  width: 45%;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.divShow {
+  display: flex;
+  flex-direction: column;
+  border: 0px dotted peru;
+  width: 60%;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.divDontShow {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid red;
+  width: 60%;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.dogContainer{
+  background-color: rgba(150, 150, 150, 0.7);
+  border: 5px solid #ccc;
+  border-radius: 5px;
+  width:65%;
+  height:fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom:10%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 50px;
+}
+
+.dogImage{
+  width: 250px;
+  height: 200px;
+  border-radius: 40%;
+  margin-left: 5%;
+}
+
+.dogText{
+  font-family: Nunito;
+  font-weight: 600;
+  font-size:x-large;
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.textAreaTemps{
+  height: 250px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 21px;
+  color: black;
+}
+
+input {
+  width: 50%;
+  padding: 15px;
+  margin: auto;
+  border: 1px solid #000000;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.labelForm {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Nunito;
+  color:white;
+  padding: 5px;
+}
+
+select {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 12%;
+}
+
+.h1Tittle{
+  font-size: 45px;
+  font-weight: 600;
+  font-family: Nunito;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid rgb(101, 218, 43);
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 60px;
+  color: black;
+}
+
+.labelError{
+  text-align: center;
+  font-size: 21.4px;
+  font-weight: 600;
+  font-family: Nunito;
+  color: red;
+  margin-top: 5px;
+}
+
+.labelCheck{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Nunito;
+  color:rgb(22, 255, 22);
+}
+
+.divButtonSend{
+  width: 1110px;
+  height: 300px;
+  margin-left:auto;
+  margin-right:auto;
+  border: 0px solid rgb(101, 218, 43);
+  padding-top: 10px;
+  font-weight: 600;
+}
+.buttonSend {
+  width: 150px;
+  height: 50px;
+  font-family: Nunito;
+  font-size: 23px;
+  border-radius: 45%;
+  margin-right:8%;
+  margin-left:10%;
+  font-weight: 600;
+}
+.buttonDelete {
+  width: 180px;
+  height: 60px;
+  font-family: Nunito;
+  font-size: 25px;
+  margin-top: 10px;
+  border: 2px dotted;
+  padding: 10px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+.buttonDelete:hover{
+  cursor:pointer;
+}
+
+/*
+ 
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Nunito;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+  }*/
