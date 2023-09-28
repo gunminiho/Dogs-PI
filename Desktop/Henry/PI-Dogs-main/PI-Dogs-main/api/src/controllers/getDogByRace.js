@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
 
         let dataObj;
         if (origin === "api") {
-            console.log("estoy entrando a api");
+            //console.log("estoy entrando a api");
             const response = await axios.get(URL + idRaza);
             const { data } = response;
             dataObj = {

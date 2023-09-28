@@ -8,6 +8,8 @@ export const APIDOGS = "APIDOGS";
 export const GETBYNAME = "GETBYNAME";
 export const BACKUP = "BACKUP";
 export const CURRENTPAGE = "CURRENTPAGE";
+export const UPDATE = "UPDATE";
+export const SETUPDATE="SETUPDATE";
 
 // creando las actions creators
 
@@ -65,6 +67,30 @@ export const setApiDogs = () => {
         }
     }
 }
+
+export const updateDogs = () => {
+    const getAllDogs = "http://localhost:3001/dogs";
+    return async (dispatch) => {
+        try {
+            const { data } = await axios.get(getAllDogs);
+            return dispatch({
+                type: UPDATE,
+                payload: data
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+}
+
+export const needsUpdate = (value) => {
+
+    return {
+        type: SETUPDATE,
+        payload: value
+    }
+}
+
 
 export const setDogsbyName = (breed) => {
     const searchByName = "http://localhost:3001/dogs/name?breed=";

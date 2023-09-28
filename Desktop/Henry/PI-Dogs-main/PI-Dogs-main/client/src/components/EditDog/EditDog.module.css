@@ -1,0 +1,160 @@
+.divForm {
+    display: flex;
+    flex-direction: row;
+    border: 0px blue solid;
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: 600;
+    max-width: 68%;
+    min-width: 67%;
+    color: peru;
+    width: 68%;
+    box-shadow: 0px 0px 15px 10px;
+}
+
+.divFormControl{
+    border: 0px skyblue solid;
+    width: 100%;
+}
+
+.divEdit {
+    border: 0px red solid;
+    padding-top: 50px;
+    height: 100vh;
+    margin-top: 80px;
+}
+
+.inputChar {
+    width: 40px;
+    height: 5px;
+    font-size: 15px;
+}
+
+.inputCharName {
+    width: 125px;
+    height: 5px;
+    font-size: 15px;
+}
+
+.divInput {
+    margin: 15px;
+    border: 0px green solid;
+    width: fit-content;
+}
+
+.divData {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    flex: auto;
+    min-width: 570px;
+    background-color: RGBA(0, 0, 0, 0.8);
+    border: 0px rgb(255, 57, 57) solid;
+}
+
+.divDataTemp {
+    flex: auto;
+    min-width: 275px;
+    max-width: 300px;
+    border: 0px peru solid;
+}
+
+.divDataChar {
+    flex: auto;
+    min-width: 275px;
+    border: 0px white solid;
+}
+
+.divImg {
+    background-color: RGBA(0, 0, 0, 0.8);
+    flex: auto;
+    border: 0px rgb(177, 55, 42) solid;
+    width: auto;
+    height: auto;
+    width: 50%;
+    padding-top: 20px;
+}
+
+.imgDog {
+    margin: 25px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+}
+
+.button {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 62px;
+    height: 25px;
+    font-family: Nunito;
+    font-weight: 600;
+    border-radius: 20%;
+}
+
+.textArea {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 25px;
+    max-width: 160px;
+    min-width: 160px;
+    max-height: 200px;
+    min-height: 200px;
+    border: 0px solid violet;
+}
+
+.labelTemperament {
+    margin-top: 50px;
+    border: 0px blue solid;
+}
+
+.selectTemperament{
+    margin-top: 10px;
+    width: 160px;
+    height: fit-content;
+}
+
+.buttonDelete {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100px;
+    height: 25px;
+    font-family: Nunito;
+    font-weight: 600;
+    border-radius: 20%;
+}
+.divErrorGreen{
+    background-color: RGBA(0, 0, 0, 0.8);
+    border: 0px solid brown;
+    width: 68%;
+    font-family: Nunito;
+    font-weight: 600;
+    color: rgb(13, 182, 13);
+    box-shadow: 0px 0px 15px 10px;
+}
+.divErrorRed{
+    background-color: RGBA(0, 0, 0, 0.8);
+    border: 0px solid brown;
+    width: 68%;
+    font-family: Nunito;
+    font-weight: 600;
+    color: rgb(235, 53, 53);
+    box-shadow: 0px 0px 15px 10px;
+}
+
+.h1{
+    background-color: RGBA(0, 0, 0, 0.8);
+    border: 0px solid brown;
+    width: 68%;
+    font-family: Nunito;
+    font-weight: 600;
+    color: peru;
+    text-align: center;
+    box-shadow: 0px 0px 15px 10px;
+}
+

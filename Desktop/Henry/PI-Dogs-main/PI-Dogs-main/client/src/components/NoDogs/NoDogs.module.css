@@ -1,0 +1,39 @@
+.text {
+    font-family: Nunito;
+    font-size: 50px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 15px;
+    color: rgb(117, 117, 117);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.divText {
+    width: 155vh;
+    border: 0px solid;
+    text-align: center;
+    /* Alineación horizontal al centro */
+    display: flex;
+    /* Utilizamos flex para alinear verticalmente */
+    justify-content: center;
+    /* Alineación vertical y horizontal al centro */
+    align-items: center;
+
+}
+.NoDogstext {
+    font-family: Nunito;
+    font-size: 50px;
+    font-weight: 600;
+    box-shadow: 0px 0px 40px 30px;
+    color:Peru;
+}
+
+
+
+.imgNoDog {
+    width: 450px;
+    height: 350px;
+    border-radius: 50%;
+    align-items: center;
+    box-shadow: 0px 0px 20px 15px;
+    color: Peru;
+}

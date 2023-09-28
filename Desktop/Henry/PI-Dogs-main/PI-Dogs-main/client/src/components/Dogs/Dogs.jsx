@@ -1,21 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dog from "../Dog/Dog";
 import styles from "./Dogs.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import NoDogs from "./../NoDogs/NoDogs";
-import { setCurrentPage } from "./../../redux/actions";
+import { setCurrentPage,updateDogs } from "./../../redux/actions";
 
 const Dogs = () => {
 
   //Estados para manejar:
   // pagina actual
   // obteniendo los perros por variable globales:
-  const { apiAllDogs, filteredDogs, errorInSearch, currentPage } = useSelector(state => state);
+  const { apiAllDogs, filteredDogs, errorInSearch, currentPage, needUpdate } = useSelector(state => state);
   const dogsToRender = filteredDogs.length > 0 ? filteredDogs : apiAllDogs;
   //////////////////////////////////////////////////////////////////////////////
   const dispatch = useDispatch();
   ///////////////////////////////perros por pagina//////////////////////////////
   const [cardsPerPage] = useState(8);
+  //// variable para actualizar los perros
 
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
@@ -34,6 +35,11 @@ const Dogs = () => {
     }
     return pagesToReturn;
   };
+
+  useEffect(() => {
+    if(needUpdate)
+    dispatch(updateDogs());
+  }, []);
 
   return (
     <div>

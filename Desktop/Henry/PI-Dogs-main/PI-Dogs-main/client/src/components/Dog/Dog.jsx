@@ -17,6 +17,7 @@ const Dog = ({ props }) => {
         <div  className={styles.card}>
             <div className={styles.cardinner}>
                 <div className={styles.cardfront}>
+                <p className={styles.dogText2}>{name}</p>
                     <img onError={handleImgError} src={imgError ? imgNotFound : image} alt={name} className={styles.dogImage} />
                 </div>
                 <div className={styles.cardback}>

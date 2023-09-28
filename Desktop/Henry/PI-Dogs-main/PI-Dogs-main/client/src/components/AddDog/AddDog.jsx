@@ -4,7 +4,7 @@ import axios from "axios";
 import validateInputs from "./validation";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setApiDogs, setBackup } from "./../../redux/actions";
+import { setApiDogs, setBackup,needsUpdate } from "./../../redux/actions";
 //endpoint para la lista de temperamentos
 const endPoint = "http://localhost:3001/temperaments";
 const postEndPoint = "http://localhost:3001/dogs";
@@ -58,10 +58,10 @@ const AddDog = () => {
   const allTemp = useSelector((state) => state.temperaments);
   useEffect(() => {
     setTemperaments(allTemp);
-    
+
     return () => {
-      dispatch(setApiDogs()); 
-      dispatch(setBackup());
+      //dispatch(setApiDogs());
+      //dispatch(setBackup());
     }
   }, []);
 
@@ -149,12 +149,15 @@ const AddDog = () => {
 
   const postDog = async () => {
     try {
-      if (dogModel.temperament.length === 0) {
+      
+      if (window.confirm("¿Are you sure everything is set to continue?") && dogModel.temperament.length === 0) {
         setpostStatusError({
           state: false,
           message: "¡You must select at least one temperament!",
         });
         return alert("Missing fields check it and try again"); // No hagas la solicitud POST si no hay temperamentos seleccionados
+      } else {
+        alert("OK! go back and check your fields");
       }
       const { status } = await axios.post(postEndPoint, dogModel);
       switch (status) {
@@ -165,18 +168,21 @@ const AddDog = () => {
               "¡Your doggy was saved sucessfully!, click on New Doge to add a new one",
           });
           setFormLocked(true);
+          dispatch(needsUpdate(true));
           break;
         case 404:
           setpostStatusError({
             state: false,
             message: "¡Check your data, there's something missing!",
           });
+          alert(postStatusError.message);
           break;
         case 500:
           setpostStatusError({
             state: false,
             message: "¡Fatal error trying to save doge info!",
           });
+          alert(postStatusError.message);
           break;
       }
     } catch (error) {

@@ -4,7 +4,7 @@ const { Dog, Temperament } = require("../db");
 
 module.exports = async (req, res) => {
   const { id,name, height, weight, lifespan, image, temperament } = req.body;
-  console.log("BODY",req.body);
+  //console.log("BODY",req.body);
   if (temperament && name && height && weight && lifespan && image)
     try {
       const newDog = await Dog.create({
@@ -23,8 +23,6 @@ module.exports = async (req, res) => {
             name: { [Op.in]: temperament }, // le pasas todo los temperamentos selecionados como un array de strings
           },
         });
-        //console.log("Temperamentos:" ,temperament);
-        //console.log(temperamentsDB);
         newDog.setTemperaments(temperamentsDB); // establece la relacion entre el perro creado y los temperamentos en la tabla relacional
         return res.status(200).json(newDog);
       }

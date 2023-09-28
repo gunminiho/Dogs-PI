@@ -7,6 +7,7 @@ const initialState = {
     FilterByTemp: "All",
     FilterByOrigin: "All",
     errorInSearch: false,
+    needUpdate:false,
     currentPage: 1,
     temperaments: []
 };
@@ -69,7 +70,7 @@ const reducer = (state = initialState, { type, payload }) => {
                     ...state,
                     filteredDogs: state.apiAllDogs,
                     errorInSearch: false,
-                    currentPage:1
+                    currentPage: 1
                 }
             }
             // FILTRO PARA SELECIONAR POR TEMPERAMENTO Y EN TODOS LOS ORIGINES
@@ -78,14 +79,14 @@ const reducer = (state = initialState, { type, payload }) => {
                 filteredDog = state.apiAllDogs.filter(dog =>
                     dog.temperament !== undefined
                     && dog.temperament.includes(state.FilterByTemp)
-                    && dog.origin === "api" || dog.origin === "db" // ultimo agregado
+                    // ultimo agregado
                 );
                 if (filteredDog.length > 0)
                     return {
                         ...state,
                         filteredDogs: filteredDog,
                         errorInSearch: false,
-                        currentPage:1
+                        currentPage: 1
                     }
                 else
                     return {
@@ -105,7 +106,7 @@ const reducer = (state = initialState, { type, payload }) => {
                         ...state,
                         filteredDogs: filteredDog,
                         errorInSearch: false,
-                        currentPage:1
+                        currentPage: 1
                     }
                 else
                     return {
@@ -127,7 +128,7 @@ const reducer = (state = initialState, { type, payload }) => {
                         ...state,
                         filteredDogs: filteredDog,
                         errorInSearch: false,
-                        currentPage:1
+                        currentPage: 1
                     }
                 else
                     return {
@@ -144,13 +145,13 @@ const reducer = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 apiAllDogs: payload,
-                currentPage:1
+                currentPage: 1
             }
         case actions.GETBYNAME:
             return {
                 ...state,
                 filteredDogs: payload,
-                currentPage:1
+                currentPage: 1
             }
         case actions.BACKUP:
             return {
@@ -164,6 +165,18 @@ const reducer = (state = initialState, { type, payload }) => {
                 ...state,
                 currentPage: payload
             }
+        case actions.UPDATE:
+            return {
+                ...state,
+                apiAllDogs: payload,
+                filteredDogs:[],
+                needUpdate:false
+            }
+            case actions.SETUPDATE:
+                return {
+                    ...state,
+                    needUpdate:payload
+                }
         default:
             return {
                 ...state

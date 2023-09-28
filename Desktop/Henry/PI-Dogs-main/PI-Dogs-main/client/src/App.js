@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Detail from "./components/Detail/Detail";
 import AddDog from "./components/AddDog/AddDog";
 import Loading from "./components/Loading/Loading";
+import EditDog from './components/EditDog/EditDog';
 import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { useDispatch } from "react-redux";
@@ -55,6 +56,7 @@ function App() {
         <Route path='/home' element={<Dogs />} />
         <Route path='/detail/:id/:origin' element={<Detail getDogs={getDogs} />} />
         <Route path='/add' element={<AddDog />} />
+        <Route path='/edit/:id' element={<EditDog />}/>
       </Routes>
     </div>
   );
